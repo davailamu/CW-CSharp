@@ -1,0 +1,193 @@
+﻿<Window x:Class="CourseWork.Admin_template"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Assembly" Height="450" Width="750" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Image x:Key="Home" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\homeicon.png" />
+        <Image x:Key="Work" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\workicon.png" />
+        <Image x:Key="Game" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\gameicon.png" />
+        <Image x:Key="Back" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\backicon.png" />
+        <Image x:Key="User" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\usericon.png"/>
+        <Image x:Key="Close" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\closeicon.png"/>
+        <Image x:Key="CloseDb" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\closeicon.png"/>
+        <Image x:Key="Save" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\saveicon.png"/>
+        <Image x:Key="Load" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\loadicon.png"/>
+        <Image x:Key="Coolerbw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\cooler.png"/>
+        <Image x:Key="Coolercolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\cooler.png"/>
+        <Image x:Key="Cpubw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\cpu.png"/>
+        <Image x:Key="Cpucolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\cpu.png"/>
+        <Image x:Key="Videobw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\video.png"/>
+        <Image x:Key="Videocolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\video.png"/>
+        <Image x:Key="Operbw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\oper.png"/>
+        <Image x:Key="Opercolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\oper.png"/>
+        <Image x:Key="Powerbw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\powerblock.png"/>
+        <Image x:Key="Powercolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\powerblock.png"/>
+        <Image x:Key="Hardbw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\harddrive.png"/>
+        <Image x:Key="Hardcolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\harddrive.png"/>
+        <Image x:Key="Motherbw" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\mother.png"/>
+        <Image x:Key="Mothercolor" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\color\mother.png"/>
+        <Style x:Key="NoEffect" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+          x:Name="Border"  
+          CornerRadius="2" 
+          BorderThickness="1">
+                            <ContentPresenter 
+            Margin="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontFamily" Value="Franklin Gothic Book"/>
+            <Setter Property="FontSize" Value="18.667"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="139"/>
+            <Setter Property="Width" Value="139"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+                            x:Name="Border"  
+                            CornerRadius="2" 
+                            BorderThickness="1">
+                            <ContentPresenter 
+                                Margin="2"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform Angle="-129" CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF081C45" Offset="0.108"/>
+            <GradientStop Color="#FF3667BE" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Canvas Name="canvas"/>
+        <Button Background="{x:Null}" Name="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="Back_Click" Margin="636,5,76,407">
+            <DynamicResource ResourceKey="Back"/>
+        </Button>
+        <Button Background="{x:Null}" Name="UserChange" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="UserChange_Click" Margin="671,5,41,407">
+            <DynamicResource ResourceKey="User"/>
+        </Button>
+        <Button Background="{x:Null}" Name="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="Close_Click" Margin="706,5,6,407">
+            <DynamicResource ResourceKey="Close"/>
+        </Button>
+        <Image Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\corpus.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="335" Width="486" Margin="136,54,120,53" />
+        <Button Name="Cooler" Cursor="Hand" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="122" Width="122" Margin="155,70,465,250" RenderTransformOrigin="2.131,0.847" Click="Cooler_Click">
+            <DynamicResource ResourceKey="Coolerbw"/>
+        </Button>
+        <Button Click="CPU_Click" Name="CPU" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="76" Width="83" Margin="283,97,376,269">
+            <DynamicResource ResourceKey="Cpubw"/>
+        </Button>
+        <Button Click="Video_Click" Name="Video" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="28" Width="206" Margin="155,204,381,210">
+            <DynamicResource ResourceKey="Videobw"/>
+        </Button>
+        <Button Click="Oper_Click" Name="Oper" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="27" Width="206" Margin="155,237,381,178">
+            <DynamicResource ResourceKey="Operbw"/>
+        </Button>
+        <Button Click="Power_Click" Name="Power" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="182" Margin="168,273,392,65">
+            <DynamicResource ResourceKey="Powerbw"/>
+        </Button>
+        <Image Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\bw\smth.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="164" Width="142" Margin="451,70,149,208"/>
+        <Button Click="Hard_Click" Name="Hard" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="136" Width="167" Margin="440,241,135,65">
+            <DynamicResource ResourceKey="Hardbw"/>
+        </Button>
+        <Button Click="Mother_Click" Name="Mother" Background="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Height="194" Width="31" Margin="387,127,324,121">
+            <DynamicResource ResourceKey="Motherbw"/>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="376" Margin="115,35,0,0" Stroke="#FF33A9E7" StrokeThickness="12" VerticalAlignment="Top" Width="526" Opacity="0.8">
+            <Rectangle.Effect>
+                <BlurEffect Radius="10"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="366" Margin="120,40,0,0" Stroke="White" StrokeThickness="2" VerticalAlignment="Top" Width="516" Opacity="0.8"/>
+        <Grid Name="Menu" Width="30" Background="#FFAED3FF" Opacity="0.7" HorizontalAlignment="Left">
+            <Button Name="Menu_Button" Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5 5 0" Click="Menu_Button_Click" Background="#FFFF4C4C" IsCancel="True" >
+                <DynamicResource ResourceKey="CloseDb"/>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                </Button.BorderBrush>
+                <Button.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0"/>
+                </Button.Foreground>
+            </Button>
+            <DataGrid Name="CoolerData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="CoolerData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="CPUData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="CPUData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="VideoData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="VideoData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="OperData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="OperData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="PowerData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="PowerData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="HardData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="HardData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="MotherData" Opacity = "0" HorizontalAlignment="Left" Height="402" Margin="10,30,0,0" VerticalAlignment="Top" Width="480" Loaded="MotherData_Loaded">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <RadioButton Name="Radio1" Opacity="0" Checked="Radio_Checked" HorizontalAlignment="Left" Height="15" Margin="23,56,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+            <RadioButton Name="Radio2" Opacity="0" Checked="Radio_Checked" HorizontalAlignment="Left" Height="15" Margin="23,76,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+            <RadioButton Name="Radio3" Opacity="0" Checked="Radio_Checked" HorizontalAlignment="Left" Height="15" Margin="23,96,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+            <RadioButton Name="Radio4" Opacity="0" Checked="Radio_Checked" HorizontalAlignment="Left" Height="15" Margin="23,116,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+
+
+        </Grid>
+        <Button Background="{x:Null}" Margin="671,305,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="S1_Click" Cursor="Hand" Height="50" Width="50" FontSize="11">
+            <DynamicResource ResourceKey="Save"/>
+        </Button>
+        <Button Name="Home" Background="{x:Null}" Margin="671,237,0,0" HorizontalAlignment="Left" Click="Home_Click" Opacity ="0.7" VerticalAlignment="Top" Cursor="Hand" Height="50" Width="50" FontSize="11" Content="{DynamicResource Home}"/>
+        <Button Name="Work" Background="{x:Null}" Margin="671,170,0,0" HorizontalAlignment="Left" Click="Work_Click" Opacity ="0.7" VerticalAlignment="Top" Cursor="Hand" Height="50" Width="50" FontSize="11" Content="{DynamicResource Work}"/>
+        <Button Name="Game" Background="{x:Null}" Margin="671,101,0,0" HorizontalAlignment="Left" Click="Game_Click" Opacity ="0.7" VerticalAlignment="Top" Cursor="Hand" Height="50" Width="50" FontSize="11" Content="{DynamicResource Game}"/>
+
+    </Grid>
+</Window>

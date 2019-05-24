@@ -1,0 +1,8 @@
+Cooler: AMD DK9-9ID2A-0L-GP 65 Вт
+CPU: AMD RYZEN X4 R3-2200G 3500 МГц AM4
+Video: AMD Radeon RX Vega 8
+Oper: 8 Гб DDR4 2666МГц
+Power: БП 450 Вт
+Hard: 1000 Гб 7200 rpm
+Mother: A320 mATX AM4
+Price: $265

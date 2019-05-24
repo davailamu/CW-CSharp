@@ -1,0 +1,7 @@
+Cooler: 
+CPU: 
+Video: 
+Oper: 
+Power: 
+Hard: 
+Mother: 

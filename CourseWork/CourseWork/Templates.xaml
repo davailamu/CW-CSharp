@@ -1,0 +1,128 @@
+﻿<Window x:Class="CourseWork.Templates"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Templates" Height="450" Width="750" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Image x:Key="Back" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\backicon.png"/>
+        <Image x:Key="User" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\usericon.png"/>
+        <Image x:Key="Close" Source="C:\Users\Аня\Desktop\портретисты XVII-XVIII веков\Курсач ООП\Конструктор\CourseWork\CourseWork\icons\closeicon.png"/>
+        <Style x:Key="RoundButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontFamily" Value="Franklin Gothic Book"/>
+            <Setter Property="FontSize" Value="18.667"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="139"/>
+            <Setter Property="Width" Value="139"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+          x:Name="Border"  
+          CornerRadius="2" 
+          BorderThickness="1">
+                            <ContentPresenter 
+            Margin="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="NoEffect" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+          x:Name="Border"  
+          CornerRadius="2" 
+          BorderThickness="1">
+                            <ContentPresenter 
+            Margin="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform Angle="-129" CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF081C45" Offset="0.108"/>
+            <GradientStop Color="#FF3667BE" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Ellipse x:Name="DomEl" Margin="93,130,0,145" Stroke="#FF33A9E7" StrokeThickness="12" HorizontalAlignment="Left" Width="171" Opacity="0.25">
+            <Ellipse.Effect>
+                <BlurEffect Radius="16"/>
+            </Ellipse.Effect>
+        </Ellipse>
+        <Canvas Name="canvas"/>
+        <Button Background="{x:Null}" Name="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="Back_Click" Margin="636,5,76,407">
+            <DynamicResource ResourceKey="Back"/>
+        </Button>
+        <Button Background="{x:Null}" Name="UserChange" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="UserChange_Click" Margin="671,5,41,407">
+            <DynamicResource ResourceKey="User"/>
+        </Button>
+        <Button Background="{x:Null}" Name="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="30" Click="Close_Click" Margin="706,5,6,407">
+            <DynamicResource ResourceKey="Close"/>
+        </Button>
+        <Ellipse x:Name="Dom" Margin="98,134,0,145" Stroke="White" RenderTransformOrigin="0.489,0.475" HorizontalAlignment="Left" Width="161" Opacity="0.25"/>
+        <Button Style="{StaticResource RoundButton}" Content="Домашний" Margin="98,134,483,145" MouseEnter="D1_MouseEnter" MouseLeave="D1_MouseLeave" Click="D1_Click" Cursor="Hand" Height="Auto" Width="Auto"/>
+        <Ellipse x:Name="WorkEl" Margin="282,130,0,145" Stroke="#FF33A9E7" StrokeThickness="12" HorizontalAlignment="Left" Width="171" Opacity="0.25">
+            <Ellipse.Effect>
+                <BlurEffect Radius="16"/>
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse x:Name="Work" Margin="287,134,0,145" Stroke="White" RenderTransformOrigin="0.489,0.475" HorizontalAlignment="Left" Width="161" Opacity="0.25"/>
+        <Button Style="{StaticResource RoundButton}" Content="Рабочий" Margin="287,134,294,145" MouseEnter="W1_MouseEnter" MouseLeave="W1_MouseLeave" Click="W1_Click" Cursor="Hand" Height="Auto" Width="Auto"/>
+        <Ellipse x:Name="GameEl" Margin="475,130,0,145" Stroke="#FF33A9E7" StrokeThickness="12" HorizontalAlignment="Left" Width="171" Opacity="0.25">
+            <Ellipse.Effect>
+                <BlurEffect Radius="16"/>
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse x:Name="Game" Margin="480,134,0,145" Stroke="White" RenderTransformOrigin="0.489,0.475" HorizontalAlignment="Left" Width="161" Opacity="0.25"/>
+        <Button Style="{StaticResource RoundButton}" Content="Игровой" Margin="480,134,101,145" MouseEnter="G1_MouseEnter" MouseLeave="G1_MouseLeave" Click="G1_Click" Cursor="Hand" Height="Auto" Width="Auto"/>
+        <DataGrid Name="HomeData" HorizontalAlignment="Left" Height="30" Margin="32,33,0,0" VerticalAlignment="Top" Width="679" Opacity="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="30"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="WorkData" HorizontalAlignment="Left" Height="30" Margin="32,33,0,0" VerticalAlignment="Top" Width="679" Opacity="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="30"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="GameData" HorizontalAlignment="Left" Height="30" Margin="32,33,0,0" VerticalAlignment="Top" Width="679" Opacity="0">
+            <DataGrid.Background>
+                <SolidColorBrush Color="#FFF0F0F0" Opacity="0.7"/>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="30"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <RadioButton Name="Radio1" Opacity="0" HorizontalAlignment="Left" Height="15" Margin="45,59,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+        <RadioButton Name="Radio2" Opacity="0" HorizontalAlignment="Left" Height="15" Margin="45,79,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+        <RadioButton Name="Radio3" Opacity="0" HorizontalAlignment="Left" Height="15" Margin="45,99,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,-0.067"/>
+
+    </Grid>
+</Window>
